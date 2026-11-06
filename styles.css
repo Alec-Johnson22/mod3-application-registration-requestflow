@@ -1,4 +1,31 @@
 :root{
+
+/* My color palette */
+/* Raw Color Tokens */
+	--color-dark-gray: #17191d;
+	--color-med-gray: #23262d;
+	--color-off-white: #f4f0e8;
+	--color-orange: #ff6538;
+	--color-dark-orange: #c74424;
+	--color-sage: #a6b0a0;
+	--color-violet: #9b5de5;
+	--color-yellow: #ffd166;
+
+    /* Semantic Color Tokens */
+    --color-text: var(--color-dark-gray);
+    --color-surface: var(--color-off-white);
+    --color-action: var(--color-dark-orange);
+    --color-accent: var(--color-yellow);
+    --color-border: var(--color-med-gray);
+    --color-error: var(--color-orange);
+    --color-muted: var(--color-sage);
+
+/* Type Tokens */
+	--font-display: Tahoma, Arial, sans-serif;
+	--font-body: Helvetica, Arial, sans-serif;
+	--font-tag: "Courier New", monospace;
+
+/* Provided color palette for reference
     --color-text:#404040;
     --color-surface:#fff;
     --color-action:#8c1d40;
@@ -6,6 +33,7 @@
     --color-border:#747474;
     --color-error:#b3261e;
     --color-muted:#5c6670;
+*/
     --space-3:1rem;
     --radius:.5rem;
     --measure:68ch;
@@ -17,15 +45,17 @@ body{
     margin:0;
     color:var(--color-text);
     background:var(--color-surface);
-    font-family:Arial,sans-serif;
+    font-family:var(--font-body);
     line-height:1.6;
 }
 .page-header{
     padding:clamp(2rem,6vw,5rem);
     background:var(--color-action);
     color:#fff;
+    font-family:var(--font-display);
 }
 .eyebrow{
+    font-family:var(--font-tag);
     color:var(--color-accent);
     font-weight:700;
 }
@@ -58,7 +88,7 @@ legend,label{
 }
 .help{
     margin:0;
-    color:var(--color-muted);
+    color:var(--color-text);
 }
 input,select,textarea,button{
     font:inherit;
