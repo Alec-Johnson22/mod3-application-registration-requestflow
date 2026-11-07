@@ -31,37 +31,79 @@
                 </fieldset>
                 <fieldset>
                     <legend>F3 · Request choices</legend>
-                    <p class="help">Let's talk about plus 1's.</p>
+                    <p class="help">Let's talk about plus 1's. (required)</p>
                     <label class="choice">
-                        <input type="radio" name="request_type" value="option-a"> I ain't coming alone!</label>
-                        <label class="choice"><input type="radio" name="request_type" value="option-b"> Just little 'ol me.</label>
+                        <input type="radio" name="request_type" value="option-a" required> I ain't coming alone!</label>
+                        <label class="choice"><input type="radio" name="request_type" value="option-b" required> Just little 'ol me.</label>
                     </fieldset>
                 <fieldset>
                     <legend>F3 · Request choices</legend>
-                    <p class="help">Okay, now what are you eating?</p>
+                    <p class="help">Okay, now what are you eating? (required)</p>
                     <label class="choice">
-                        <input type="radio" name="request_type" value="option-a"> Gimme the meat!</label>
-                        <label class="choice"><input type="radio" name="request_type" value="option-b"> I'm a vegan and you know this.</label>
+                        <input type="radio" name="request_type" value="option-a" required> Gimme the meat!</label>
+                        <label class="choice"><input type="radio" name="request_type" value="option-b" required> I'm a vegan and you know this.</label>
                     </fieldset>
                     <div class="field">
                         <label for="details">Request details</label>
                         <p class="help" id="details-help">Please list any dietary restrictions.</p>
-                        <textarea id="details" name="details" aria-describedby="details-help"></textarea>
+                        <textarea id="details" name="details" aria-describedby="details-help" maxlength="150"></textarea>
+                    </div>
+                    <div class="field">
+                        <label for="details">Request details</label>
+                        <p class="help" id="details-help">Any Song Requests? Give us a few of your party favorites!</p>
+                        <textarea id="details" name="details" aria-describedby="details-help" maxlength="150"></textarea>
                     </div>
                     <button type="submit">RSVP</button>
                 </form>
                 <section id="states">
                     <h2>F5 · State and Recovery Specimen</h2>
                     <p>Document default, focus, required, valid, invalid, disabled, and a static server-returned error. Keep this section separate from the primary blank form when necessary to avoid misleading users.</p>
-                    <div class="error-summary">
-                        <h3>There is a problem with the fictional submission</h3>
-                        <p><a href="#error-example">Email address needs attention</a></p>
-                    </div>
-                    <div class="field field-error">
-                        <label for="error-example">Email address</label>
-                        <input id="error-example" type="email" value="alex.example" aria-invalid="true" aria-describedby="error-message">
-                        <p id="error-message"><strong>Error:</strong> Enter an address in the format name@example.com.</p>
-                    </div>
+                    <section class="error-block">
+                        <div class="error-summary">
+                            <h3>There is a problem with the fictional submission</h3>
+                            <p><a href="#error-example">Name needs attention</a></p>
+                        </div>
+                        <div class="field field-error">
+                            <label for="error-example">Name</label>
+                            <input id="error-example" type="text" value="John Smith" aria-invalid="true" aria-describedby="error-message">
+                            <p id="error-message"><strong>Error:</strong> Enter an name in the format John Smith.</p>
+                        </div>
+                    </section>
+                    <section class="error-block">
+                        <div class="error-summary">
+                            <h3>There is a problem with the fictional submission</h3>
+                            <p><a href="#error-example">Email address needs attention</a></p>
+                        </div>
+                        <div class="field field-error">
+                            <label for="error-example">Email address</label>
+                            <input id="error-example" type="email" value="alex.example" aria-invalid="true" aria-describedby="error-message">
+                            <p id="error-message"><strong>Error:</strong> Enter an address in the format name@example.com.</p>
+                        </div>
+                    </section>
+                    <section class="error-block">
+                        <div class="error-summary">
+                            <h3>There is a problem with the fictional submission</h3>
+                            <p><a href="#error-example">Are you bringing a plus 1?</a></p>
+                        </div>
+                        <div class="field field-error">
+                            <label class="choice">
+                        <input type="radio" name="request_type" value="option-a" required> I ain't coming alone!</label>
+                        <label class="choice"><input type="radio" name="request_type" value="option-b" required> Just little 'ol me.</label>
+                            <p id="error-message"><strong>Error:</strong> Please select one of the two options.</p>
+                        </div>
+                    </section>
+                    <section class="error-block">
+                        <div class="error-summary">
+                            <h3>There is a problem with the fictional submission</h3>
+                            <p><a href="#error-example">What are you eating?</a></p>
+                        </div>
+                        <div class="field field-error">
+                            <label class="choice">
+                        <input type="radio" name="request_type" value="option-a" required> Gimme the meat!</label>
+                        <label class="choice"><input type="radio" name="request_type" value="option-b" required> I'm a vegan and you know this.</label>
+                            <p id="error-message"><strong>Error:</strong> Please select one of the two options.</p>
+                        </div>
+                    </section>
                     <button type="button" disabled>Disabled example</button>
                 </section>
                 <section id="documentation">

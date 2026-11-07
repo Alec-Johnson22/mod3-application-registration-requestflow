@@ -130,7 +130,7 @@ button{
 .error-summary,.field-error{
     padding:1rem;
     border-left:.4rem solid var(--color-error);
-    background:#fff1f0;
+    background:var(--color-accent);
 }
 .field-error input{
     border-color:var(--color-error);
