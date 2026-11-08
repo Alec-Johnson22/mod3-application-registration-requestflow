@@ -22,37 +22,52 @@
                     <p class="help">Gotta know who's coming!<br>Also, an email would be helpful to make sure you're up to date for the big day!</p>
                     <div class="field">
                         <label for="name">Name (required)</label>
-                        <input id="name" name="name" type="text" autocomplete="name" required>
+                        <input id="name" name="name" type="text" autocomplete="name" maxlength="50" required>
                     </div>
                     <div class="field">
                         <label for="email">Email address (required)</label>
-                        <input id="email" name="email" type="email" autocomplete="email" required>
+                        <input id="email" name="email" type="email" autocomplete="email" maxlength="50" required>
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend>F3 · Request choices</legend>
-                    <p class="help">Let's talk about plus 1's. (required)</p>
+                    <legend>F3 · Plus-Ones</legend>
+                    <p class="help">Let's talk about plus 1s.</p>
                     <label class="choice">
-                        <input type="radio" name="request_type" value="option-a" required> I ain't coming alone!</label>
-                        <label class="choice"><input type="radio" name="request_type" value="option-b" required> Just little 'ol me.</label>
-                    </fieldset>
+                    <input type="checkbox" name="plusOne" value="option-a"> I ain't coming alone!</label>
+                    <p>A non-answer is assumed to be "No".</p>
+                </fieldset>
                 <fieldset>
-                    <legend>F3 · Request choices</legend>
+                    <legend>F3 · Bringing the Kids?</legend>
+                    <p>Let us know if you are bringing the kids along! They are more than welcome.<br>Please enter a number from 0 to 8.</p>
+                    <div class="field">
+                        <label for="kids">Number of kids attending</label>
+                        <input id="kids" name="kids" type="number" min="0" max="8">
+                    </div>
+                    <p>A non-answer will be an assumed 0.</p>
+                </fieldset>
+                <fieldset>
+                    <legend>F3 · Food Options</legend>
                     <p class="help">Okay, now what are you eating? (required)</p>
                     <label class="choice">
-                        <input type="radio" name="request_type" value="option-a" required> Gimme the meat!</label>
-                        <label class="choice"><input type="radio" name="request_type" value="option-b" required> I'm a vegan and you know this.</label>
+                        <input type="radio" name="food" value="option-a" required> Gimme the meat!</label>
+                        <label class="choice"><input type="radio" name="food" value="option-b" required> I'm a vegan and you know this.</label>
                     </fieldset>
                     <div class="field">
-                        <label for="details">Request details</label>
-                        <p class="help" id="details-help">Please list any dietary restrictions.</p>
-                        <textarea id="details" name="details" aria-describedby="details-help" maxlength="150"></textarea>
+                        <label for="diet">Dietary Restrictions</label>
+                        <p class="help" id="diet-help">Please list any dietary restrictions.</p>
+                        <textarea id="diet" name="dietary_restrictions" aria-describedby="diet-help" autocomplete="dietary restrictions" maxlength="150"></textarea>
                     </div>
                     <div class="field">
-                        <label for="details">Request details</label>
-                        <p class="help" id="details-help">Any Song Requests? Give us a few of your party favorites!</p>
-                        <textarea id="details" name="details" aria-describedby="details-help" maxlength="150"></textarea>
+                        <label for="songs">Song requests</label>
+                        <p class="help" id="songs-help">Any Song Requests? Give us a few of your party favorites!</p>
+                        <textarea id="songs" name="songs" aria-describedby="songs-help" autocomplete="song requests" maxlength="150"></textarea>
                     </div>
+                    <fieldset>
+                    <legend>F3 · Dress Code</legend>
+                    <p class="help"><strong>Required:</strong><br>Confirm you aren't wearing white on the day.<br>Seriously, leave that for the bride.</p>
+                    <label class="choice">
+                    <input type="checkbox" name="no_white" value="option-a" required> I Promise!</label>
+                </fieldset>
                     <button type="submit">RSVP</button>
                 </form>
                 <section id="states">
@@ -83,18 +98,6 @@
                     <section class="error-block">
                         <div class="error-summary">
                             <h3>There is a problem with the fictional submission</h3>
-                            <p><a href="#error-example">Are you bringing a plus 1?</a></p>
-                        </div>
-                        <div class="field field-error">
-                            <label class="choice">
-                        <input type="radio" name="request_type" value="option-a" required> I ain't coming alone!</label>
-                        <label class="choice"><input type="radio" name="request_type" value="option-b" required> Just little 'ol me.</label>
-                            <p id="error-message"><strong>Error:</strong> Please select one of the two options.</p>
-                        </div>
-                    </section>
-                    <section class="error-block">
-                        <div class="error-summary">
-                            <h3>There is a problem with the fictional submission</h3>
                             <p><a href="#error-example">What are you eating?</a></p>
                         </div>
                         <div class="field field-error">
@@ -104,6 +107,19 @@
                             <p id="error-message"><strong>Error:</strong> Please select one of the two options.</p>
                         </div>
                     </section>
+
+                    <section class="error-block">
+                        <div class="error-summary">
+                            <h3>There is a problem with the fictional submission</h3>
+                            <p><a href="#error-example">Confirm you won't wear white.</a></p>
+                        </div>
+                        <div class="field field-error">
+                            <label class="choice">
+                            <input type="checkbox" name="no_white" value="option-a" required> I Promise!</label>
+                            <p id="error-message"><strong>Error:</strong> Please confirm that you will not be wearing white on the day of the wedding.</p>
+                        </div>
+                    </section>
+
                     <button type="button" disabled>Disabled example</button>
                 </section>
                 <section id="documentation">
