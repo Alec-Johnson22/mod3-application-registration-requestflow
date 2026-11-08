@@ -16,7 +16,7 @@
                 <h2>F1 · Purpose and Expectations</h2>
                 <p>Privacy Notice: This data is used to confirm your attendance and help us plan the event accordingly. We will never share your information with third parties.</p>
             </section>
-            <form action="" method="get">
+            <form action="#" method="get">
                 <fieldset>
                     <legend>F3 · Contact information</legend>
                     <p class="help">Gotta know who's coming!<br>Also, an email would be helpful to make sure you're up to date for the big day!</p>
@@ -41,7 +41,7 @@
                     <p>Let us know if you are bringing the kids along! They are more than welcome.<br>Please enter a number from 0 to 8.</p>
                     <div class="field">
                         <label for="kids">Number of kids attending</label>
-                        <input id="kids" name="kids" type="number" min="0" max="8">
+                        <input id="kids" name="kids" type="number" value="0" min="0" max="8">
                     </div>
                     <p>A non-answer will be an assumed 0.</p>
                 </fieldset>
@@ -51,18 +51,18 @@
                     <label class="choice">
                         <input type="radio" name="food" value="option-a" required> Gimme the meat!</label>
                         <label class="choice"><input type="radio" name="food" value="option-b" required> I'm a vegan and you know this.</label>
-                    </fieldset>
-                    <div class="field">
-                        <label for="diet">Dietary Restrictions</label>
-                        <p class="help" id="diet-help">Please list any dietary restrictions.</p>
-                        <textarea id="diet" name="dietary_restrictions" aria-describedby="diet-help" autocomplete="dietary restrictions" maxlength="150"></textarea>
-                    </div>
-                    <div class="field">
-                        <label for="songs">Song requests</label>
-                        <p class="help" id="songs-help">Any Song Requests? Give us a few of your party favorites!</p>
-                        <textarea id="songs" name="songs" aria-describedby="songs-help" autocomplete="song requests" maxlength="150"></textarea>
-                    </div>
-                    <fieldset>
+                </fieldset>
+                <div class="field" >
+                    <label for="diet">Dietary Restrictions</label>
+                    <p class="help" id="diet-help">Please list any dietary restrictions.</p>
+                    <textarea id="diet" name="dietary_restrictions" aria-describedby="diet-help" maxlength="150"></textarea>
+                </div>
+                <div class="field">
+                    <label for="songs">Song requests</label>
+                    <p class="help" id="songs-help">Any Song Requests? Give us a few of your party favorites!</p>
+                    <textarea id="songs" name="songs" aria-describedby="songs-help" maxlength="150"></textarea>
+                </div>
+                <fieldset>
                     <legend>F3 · Dress Code</legend>
                     <p class="help"><strong>Required:</strong><br>Confirm you aren't wearing white on the day.<br>Seriously, leave that for the bride.</p>
                     <label class="choice">
@@ -79,9 +79,9 @@
                             <p><a href="#error-example">Name needs attention</a></p>
                         </div>
                         <div class="field field-error">
-                            <label for="error-example">Name</label>
-                            <input id="error-example" type="text" value="John Smith" aria-invalid="true" aria-describedby="error-message">
-                            <p id="error-message"><strong>Error:</strong> Enter an name in the format John Smith.</p>
+                            <label for="error-name">Name</label>
+                            <input id="error-name" type="text" value="John Smith" aria-invalid="true" aria-describedby="error-message">
+                            <p id="error-message-name"><strong>Error:</strong> Enter an name in the format John Smith.</p>
                         </div>
                     </section>
                     <section class="error-block">
@@ -90,9 +90,9 @@
                             <p><a href="#error-example">Email address needs attention</a></p>
                         </div>
                         <div class="field field-error">
-                            <label for="error-example">Email address</label>
-                            <input id="error-example" type="email" value="alex.example" aria-invalid="true" aria-describedby="error-message">
-                            <p id="error-message"><strong>Error:</strong> Enter an address in the format name@example.com.</p>
+                            <label for="error-email">Email address</label>
+                            <input id="error-email" type="email" value="alex.example" aria-invalid="true" aria-describedby="error-message">
+                            <p id="error-message-email"><strong>Error:</strong> Enter an address in the format name@example.com.</p>
                         </div>
                     </section>
                     <section class="error-block">
@@ -104,7 +104,7 @@
                             <label class="choice">
                         <input type="radio" name="request_type" value="option-a" required> Gimme the meat!</label>
                         <label class="choice"><input type="radio" name="request_type" value="option-b" required> I'm a vegan and you know this.</label>
-                            <p id="error-message"><strong>Error:</strong> Please select one of the two options.</p>
+                            <p id="error-message-food"><strong>Error:</strong> Please select one of the two options.</p>
                         </div>
                     </section>
 
@@ -116,7 +116,7 @@
                         <div class="field field-error">
                             <label class="choice">
                             <input type="checkbox" name="no_white" value="option-a" required> I Promise!</label>
-                            <p id="error-message"><strong>Error:</strong> Please confirm that you will not be wearing white on the day of the wedding.</p>
+                            <p id="error-message-dress"><strong>Error:</strong> Please confirm that you will not be wearing white on the day of the wedding.</p>
                         </div>
                     </section>
 
@@ -125,6 +125,8 @@
                 <section id="documentation">
                     <h2>F2 and F6 · Planning and Evidence</h2>
                     <p>Link your field inventory, state matrix, fictional test-data list, completed test record, and AI disclosure.</p>
+                    <a href="field-inventory-template.html">Field Inventory</a>
+                    <a href="state-matrix.html">State Matrix</a>
                 </section>
             </main>
         </body>

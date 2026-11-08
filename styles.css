@@ -139,6 +139,16 @@ button:disabled{
     opacity:.55;
     cursor:not-allowed;
 }
+#documentation a {
+    text-decoration: none;
+    color:var(--color-surface);
+    font-family:var(--font-body);
+    background:var(--color-action);
+    border-color:var(--color-action);
+    padding:.75rem 1rem;
+    border-radius:.25rem;
+    font-weight:700;
+}
 @media (min-width:48rem){
     .paired-fields{
         display:grid;

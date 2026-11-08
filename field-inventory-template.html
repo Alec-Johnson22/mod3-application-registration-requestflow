@@ -5,6 +5,18 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Field Inventory</title>
         <style>
+        :root{
+            --color-text:#404040;
+            --color-surface:#fff;
+            --color-action:#8c1d40;
+            --color-accent:#ffc627;
+            --color-border:#747474;
+            --color-error:#b3261e;
+            --color-muted:#5c6670;
+            --space-3:1rem;
+            --radius:.5rem;
+            --measure:68ch;
+        }    
         body{
             font-family:Arial,sans-serif;
             line-height:1.5;
@@ -16,6 +28,7 @@
         table{
             width:100%;
             border-collapse:collapse;
+            margin-bottom:1rem;
         }
         th,td{
             padding:.6rem;
@@ -25,6 +38,16 @@
         }
         th{
             background:#f1f1f1;
+        }
+        a {
+            text-decoration: none;
+            color:var(--color-surface);
+            font-family:var(--font-body);
+            background:var(--color-muted);
+            border-color:var(--color-muted);
+            padding:.75rem 1rem;
+            border-radius:.25rem;
+            font-weight:700;
         }
         </style>
         </head>
@@ -101,7 +124,7 @@
                         <td>No</td>
                         <td>textarea</td>
                         <td>dietary_restrictions</td>
-                        <td>dietary restrictions</td>
+                        <td>N/A</td>
                         <td>maxlength="150"</td>
                         <td>Low Sensitivity</td>
                     </tr>
@@ -111,7 +134,7 @@
                         <td>No</td>
                         <td>textarea</td>
                         <td>songs</td>
-                        <td>song requests</td>
+                        <td>N/A</td>
                         <td>maxlength="150"</td>
                         <td>Low Sensitivity</td>
                     </tr>
@@ -127,5 +150,7 @@
                     </tr>
                 </tbody>
             </table>
+            <a href="index.html">Back to Form</a>
+            <a href="state-matrix.html">State Matrix</a>
         </body>
         </html>
